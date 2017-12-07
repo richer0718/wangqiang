@@ -30,7 +30,7 @@ class AlipayTradeAppPayRequest
 
 	public function getBizContent()
 	{
-		return $this->bizContent;
+		return json_encode($this->bizContent);
 	}
 
 	public function getApiMethodName()
