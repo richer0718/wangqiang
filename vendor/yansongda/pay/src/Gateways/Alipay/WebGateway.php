@@ -13,8 +13,7 @@ class WebGateway extends Alipay
      */
     protected function getMethod()
     {
-        //return 'alipay.trade.page.pay';
-        return 'alipay.trade.app.pay';
+        return 'alipay.trade.page.pay';
     }
 
     /**
@@ -26,8 +25,7 @@ class WebGateway extends Alipay
      */
     protected function getProductCode()
     {
-        //return 'FAST_INSTANT_TRADE_PAY';
-        return 'QUICK_MSECURITY_PAY';
+        return 'FAST_INSTANT_TRADE_PAY';
     }
 
     /**

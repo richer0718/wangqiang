@@ -15,7 +15,6 @@ abstract class Alipay implements GatewayInterface
     /**
      * @var string
      */
-    //protected $gateway = 'https://openapi.alipaydev.com/gateway.do'.'?charset=utf-8';
     protected $gateway = 'https://openapi.alipay.com/gateway.do'.'?charset=utf-8';
 
     /**
@@ -48,15 +47,11 @@ abstract class Alipay implements GatewayInterface
         }
 
         $this->config = [
-            'service' => 'mobile.securitypay.pay',
-            'partner' => $this->user_config->get('partner', ''),
             'app_id'      => $this->user_config->get('app_id'),
             'method'      => '',
-            'payment_type' => 1,
             'format'      => 'JSON',
-            '_input_charset'     => 'utf-8',
-            'sign_type'   => 'RSA',
-            //'sign_type'   => 'RSA2',
+            'charset'     => 'utf-8',
+            'sign_type'   => 'RSA2',
             'version'     => '1.0',
             'return_url'  => $this->user_config->get('return_url', ''),
             'notify_url'  => $this->user_config->get('notify_url', ''),

@@ -1,6 +1,6 @@
 <?php
 /**
- * ALIPAY API: mybank.finance.yulibao.prize.query request
+ * ALIPAY API: mybank.finance.yulibao.price.query request
  *
  * @author auto create
  * @since 1.0, 2016-11-18 16:08:17
@@ -35,7 +35,7 @@ class MybankFinanceYulibaoPriceQueryRequest
 
 	public function getApiMethodName()
 	{
-		return "mybank.finance.yulibao.prize.query";
+		return "mybank.finance.yulibao.price.query";
 	}
 
 	public function setNotifyUrl($notifyUrl)

@@ -2574,16 +2574,16 @@
         },
         {
             "name": "yansongda/pay",
-            "version": "v1.2.3",
+            "version": "v1.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yansongda/pay.git",
-                "reference": "f4b4170bb894c77f403846cfc146a522c1ab1e83"
+                "reference": "256a5f2c610d300a204d1b5c84ae54c9681354a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/yansongda/pay/f4b4170bb894c77f403846cfc146a522c1ab1e83.zip",
-                "reference": "f4b4170bb894c77f403846cfc146a522c1ab1e83",
+                "url": "https://files.phpcomposer.com/files/yansongda/pay/256a5f2c610d300a204d1b5c84ae54c9681354a2.zip",
+                "reference": "256a5f2c610d300a204d1b5c84ae54c9681354a2",
                 "shasum": ""
             },
             "require": {
@@ -2615,7 +2615,7 @@
                 "pay",
                 "wechat"
             ],
-            "time": "2017-09-20T03:49:49+00:00"
+            "time": "2017-12-08T01:55:40+00:00"
         }
     ],
     "packages-dev": [
