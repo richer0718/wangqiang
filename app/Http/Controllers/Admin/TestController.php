@@ -23,6 +23,7 @@ class TestController extends Controller
 //实例化具体API对应的request类,类名称和接口名称对应,当前调用接口名称：alipay.open.public.template.message.industry.modify
         $request = new \AlipayTradeAppPayRequest();
 //SDK已经封装掉了公共参数，这里只需要传入业务参数
+        /*
         $bizcontent = "{\"body\":\"test\","
             . "\"subject\": \"Apptest\","
             . "\"out_trade_no\": \"201712345436436\","
@@ -30,6 +31,18 @@ class TestController extends Controller
             . "\"total_amount\": \"0.01\","
             . "\"product_code\":\"QUICK_MSECURITY_PAY\""
             . "}";
+        dump($bizcontent);
+        */
+
+        $bizcontent = [
+            'body'=>'test',
+            'subject' => 'Apptest',
+            'out_trade_no' => (string)time(),
+            'total_amount' => '0.01',
+            'timeout_express' => '30m',
+            'product_code' => "QUICK_MSECURITY_PAY"
+        ];
+        $bizcontent = json_encode($bizcontent);
         $request->setNotifyUrl("http://jc.xyzxzy.cn/public/alipay");
         $request->setBizContent($bizcontent);
 //这里和普通的接口调用不同，使用的是sdkExecute
