@@ -25,7 +25,7 @@ class TestController extends Controller
 //SDK已经封装掉了公共参数，这里只需要传入业务参数
         $bizcontent = "{\"body\":\"我是测试数据\","
             . "\"subject\": \"App支付测试\","
-            . "\"out_trade_no\": \"20170125test02\","
+            . "\"out_trade_no\": \"201712345436436\","
             . "\"timeout_express\": \"30m\","
             . "\"total_amount\": \"0.01\","
             . "\"product_code\":\"QUICK_MSECURITY_PAY\""
