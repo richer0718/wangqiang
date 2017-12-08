@@ -882,7 +882,7 @@ class ComposerStaticInitba00ac71e5971113f7d6ed02784efa7a
         'AntMerchantExpandMapplyorderQueryRequest' => __DIR__ . '/../..' . '/app/AopSdk/aop/request/AntMerchantExpandMapplyorderQueryRequest.php',
         'AntMerchantExpandMerchantStorelistQueryRequest' => __DIR__ . '/../..' . '/app/AopSdk/aop/request/AntMerchantExpandMerchantStorelistQueryRequest.php',
         'AntMerchantExpandPersonalApplyRequest' => __DIR__ . '/../..' . '/app/AopSdk/aop/request/AntMerchantExpandPersonalApplyRequest.php',
-        'AopClient' => __DIR__ . '/../..' . '/app/AopSdk/aop/AopClient.php',
+        'AopClientP' => __DIR__ . '/../..',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Admin\\IndexController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/IndexController.php',

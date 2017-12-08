@@ -522,7 +522,7 @@ return array(
     'AntMerchantExpandMapplyorderQueryRequest' => $baseDir . '/app/AopSdk/aop/request/AntMerchantExpandMapplyorderQueryRequest.php',
     'AntMerchantExpandMerchantStorelistQueryRequest' => $baseDir . '/app/AopSdk/aop/request/AntMerchantExpandMerchantStorelistQueryRequest.php',
     'AntMerchantExpandPersonalApplyRequest' => $baseDir . '/app/AopSdk/aop/request/AntMerchantExpandPersonalApplyRequest.php',
-    'AopClient' => $baseDir . '/app/AopSdk/aop/AopClient.php',
+    'AopClientP' => $baseDir . '/app/AopSdk/aop/AopClientP_p.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\Admin\\IndexController' => $baseDir . '/app/Http/Controllers/Admin/IndexController.php',
