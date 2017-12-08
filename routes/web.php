@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/test', 'Admin\TestController@index');
+Route::get('/test2', 'Admin\TestController@index2');
 Route::get('/getData', 'Admin\TestController@getData');
 
 Route::get('/downLoad/{code}', 'DownLoadController@index');
