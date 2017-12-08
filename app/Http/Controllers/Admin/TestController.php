@@ -30,7 +30,7 @@ class TestController extends Controller
             . "\"total_amount\": \"0.01\","
             . "\"product_code\":\"QUICK_MSECURITY_PAY\""
             . "}";
-        $request->setNotifyUrl("http://jhqck.com/kaisa/public/api/alipay");
+        $request->setNotifyUrl("http://jc.xyzxzy.cn/public/alipay");
         $request->setBizContent($bizcontent);
 //这里和普通的接口调用不同，使用的是sdkExecute
         $response = $c->sdkExecute($request);
