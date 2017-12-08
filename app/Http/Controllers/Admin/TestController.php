@@ -9,7 +9,7 @@ use AopClient;
 
 class TestController extends Controller
 {
-    function index2(){
+    function index(){
         //MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsXeipgTyIJrrACuUNHb+Q3RQvqSGcQnAHR9+hwepj73xj/OXI6U+AAlIEjByElk6j2LpUGCv23faEI19o3AMoH6sYv1WP5UJR+C0oLPgNGJUrRNviuy4GNYM1t6RThqAuvzeSZ4HFRXF2RzqFe2KTBxwaxBv3cCMUtO2vZcalgwHRqSFa15sPlFctuP5h/Y80kZdzaFVNiRd2gz/eyWHDZOdTS60Jirs46maBnR0kwHiYkOq2K2AXy4mBV1hN5UMiEWcs+Nyz9b62N6yaE9kufz3iMvnIFlhr7iEuMAWA05pUggzdmUltBDHGOPfxNwGfAyb/OoDc6SD7lAq1I1JCQIDAQAB
         $c = new AopClient();
         $c->gatewayUrl = "https://openapi.alipay.com/gateway.do";
@@ -53,7 +53,7 @@ class TestController extends Controller
 
     }
 
-    function index(){
+    function index2(){
         header('Access-Control-Allow-Origin: *');
         header('Content-type: text/plain');
 // 获取支付金额
