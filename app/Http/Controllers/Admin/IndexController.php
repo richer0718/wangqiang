@@ -47,7 +47,10 @@ class IndexController extends Controller
         $data['user'] = DB::table('user') -> count();
         //最新期数
         $temp = DB::table('openprize') -> orderBy('id','desc') -> first();
-        $data['qishu'] = $temp  -> prize_number;
+        if($temp){
+            $data['qishu'] = $temp  -> prize_number;
+        }
+
 
         //总充值
         $data['chongzhi'] = DB::table('buylog') -> where([
