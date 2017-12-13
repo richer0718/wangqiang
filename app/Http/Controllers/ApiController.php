@@ -300,6 +300,7 @@ class ApiController extends Controller
         header('Access-Control-Allow-Origin:*');
         $order_id = $_POST['out_trade_no'];
         $price = $_POST['price'];
+        file_put_contents(storage_path().'/tmp/logggg123.txt',$order_id);
         DB::connection()->enableQueryLog();
         //更改is_pay
         $log = DB::table('buylog') -> where([
