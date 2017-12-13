@@ -309,7 +309,8 @@ class ApiController extends Controller
         $url_verify = 'https://mapi.alipay.com/gateway.do?service=notify_verify&partner=2088221422641136&notify_id='.$_POST['notify_id'];
         $verify_res = file_get_contents($url_verify);
         //var_dump($verify_res);exit;
-
+        file_put_contents(storage_path().'/sdfdsfsdf.txt',$verify_res);
+        file_put_contents(storage_path().'/sdfdsfsdf2.txt',$_POST['trade_status']);
 
         if($verify_res == 'true' && $_POST['trade_status'] == 'TRADE_SUCCESS'){
             file_put_contents(storage_path().'/sdfdsfsdf.txt',$_POST['out_trade_no']);
