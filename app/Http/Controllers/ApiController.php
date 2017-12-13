@@ -317,10 +317,14 @@ class ApiController extends Controller
             //验签完毕
             $order_id = $_POST['out_trade_no'];
             $price = $_POST['price'];
+            DB::connection()->enableQueryLog();
+
+
             //查找buy_log
             $log = DB::table('buylog') -> where([
                 'order_id' => $order_id
             ]) -> first();
+            file_put_contents(storage_path().'/tmp/logg.txt',print_r(DB::getQueryLog()));
             file_put_contents(storage_path().'/tmp/12344444.txt',$log->id);
             if($log){
                 //更改is_pay
