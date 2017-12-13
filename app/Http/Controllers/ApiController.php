@@ -316,7 +316,7 @@ class ApiController extends Controller
             file_put_contents(storage_path().'/tmp/12344.txt',$_POST['out_trade_no']);
             //验签完毕
             $order_id = $_POST['out_trade_no'];
-            $price = $_POST['price'];
+            $price = $_POST['total_amount'];
             //查找buy_log
             $log = DB::table('buylog') -> where([
                 'order_id' => $order_id
