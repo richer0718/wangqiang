@@ -869,7 +869,7 @@ class ApiController extends Controller
             'product_code' => "QUICK_MSECURITY_PAY"
         ];
         $bizcontent = json_encode($bizcontent);
-        $request2->setNotifyUrl("https://jc.xyzxzy.cn/api/public/alipay");
+        $request2->setNotifyUrl("https://jc.xyzxzy.cn/public/api/alipay");
         $request2->setBizContent($bizcontent);
         //这里和普通的接口调用不同，使用的是sdkExecute
         $sign = $c->sdkExecute($request2);
