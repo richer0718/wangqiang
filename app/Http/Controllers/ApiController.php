@@ -305,18 +305,18 @@ class ApiController extends Controller
         //var_dump(app_path().'/AliPay/alipay.config.php');exit;
         //include app_path().'/AliPay/notify_url.php';
         //dd($alipay_config);
-        file_put_contents(storage_path().'/ttttsetets.txt',json_encode($_POST));
+
         $url_verify = 'https://mapi.alipay.com/gateway.do?service=notify_verify&partner=2088221422641136&notify_id='.$_POST['notify_id'];
         $verify_res = file_get_contents($url_verify);
         //var_dump($verify_res);exit;
-        file_put_contents(storage_path().'/tmp/sdfdsfsdf.txt',$verify_res);
-        file_put_contents(storage_path().'/tmp/sdfdsfsdf2.txt',$_POST['trade_status']);
 
         if($verify_res == 'true' && $_POST['trade_status'] == 'TRADE_SUCCESS'){
-            file_put_contents(storage_path().'/tmp/12344.txt',$_POST['out_trade_no']);
+
             //验签完毕
             $order_id = $_POST['out_trade_no'];
             $price = $_POST['total_amount'];
+            file_put_contents(storage_path().'/tmp/12344.txt',$order_id);
+            file_put_contents(storage_path().'/tmp/1234423.txt',$price);
             //查找buy_log
             $log = DB::table('buylog') -> where([
                 'order_id' => $order_id
