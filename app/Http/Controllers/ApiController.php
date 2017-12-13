@@ -898,6 +898,7 @@ class ApiController extends Controller
             'point' => $point,
             'created_at' => time()
         ]);
+        file_put_contents(storage_path().'/ffff.txt',$sign);
         echo $sign;
         //return response() -> json($sign);
         //在user表中加入记录
