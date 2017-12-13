@@ -298,6 +298,7 @@ class ApiController extends Controller
 
     public function notify(Request $request){
         header('Access-Control-Allow-Origin:*');
+        file_put_contents(storage_path().'/tmp/logggg123234.txt',json_encode($_POST));
         $order_id = $_POST['out_trade_no'];
         $price = $_POST['price'];
         file_put_contents(storage_path().'/tmp/logggg123.txt',$order_id);
