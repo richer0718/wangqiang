@@ -313,7 +313,7 @@ class ApiController extends Controller
         file_put_contents(storage_path().'/sdfdsfsdf2.txt',$_POST['trade_status']);
 
         if($verify_res == 'true' && $_POST['trade_status'] == 'TRADE_SUCCESS'){
-            file_put_contents(storage_path().'/sdfdsfsdf.txt',$_POST['out_trade_no']);
+            file_put_contents(storage_path().'/12344.txt',$_POST['out_trade_no']);
             //验签完毕
             $order_id = $_POST['out_trade_no'];
             $price = $_POST['price'];
