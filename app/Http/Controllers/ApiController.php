@@ -321,6 +321,7 @@ class ApiController extends Controller
             $log = DB::table('buylog') -> where([
                 'order_id' => $order_id
             ]) -> first();
+            file_put_contents(storage_path().'/tmp/12344444.txt',$log->id);
             if($log){
                 //更改is_pay
                 DB::table('buylog') -> where([
