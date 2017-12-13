@@ -298,6 +298,30 @@ class ApiController extends Controller
 
     public function notify(Request $request){
         header('Access-Control-Allow-Origin:*');
+        $order_id = $_POST['out_trade_no'];
+        $price = $_POST['price'];
+        //更改is_pay
+        $log = DB::table('buylog') -> where([
+            'order_id' => $order_id
+        ]) -> first();
+        DB::table('buylog') -> where([
+            'order_id' => $order_id
+        ]) -> update([
+            'is_pay' => 1,
+            'updated_at' => time()
+        ]);
+        //user 加余额
+        $user_info = DB::table('user') -> where([
+            'openid' => $log -> openid
+        ]) -> first();
+        DB::table('user') -> where([
+            'openid' => $log -> openid
+        ]) -> update([
+            'point' => $user_info -> point + $price
+        ]);
+        echo 'success';exit;
+
+
         //$temp = json_decode('{"discount":"0.00","payment_type":"1","trade_no":"2017112021001104040253319949","subject":"\u51ef\u6492\u7535\u5b50","buyer_email":"187****4202","gmt_create":"2017-11-20 22:36:21","notify_type":"trade_status_sync","quantity":"1","out_trade_no":"2017112046364","seller_id":"2088621908302474","notify_time":"2017-11-20 22:36:23","body":"\u51ef\u6492\u7535\u5b50","trade_status":"TRADE_SUCCESS","is_total_fee_adjust":"N","total_fee":"0.01","gmt_payment":"2017-11-20 22:36:22","seller_email":"jinhaoqck@163.com","price":"0.01","buyer_id":"2088802485328042","notify_id":"68ce8a0e90643990704d502c2378e57gb6","use_coupon":"N","sign_type":"RSA","sign":"dg306Nn1\/XKiQ\/OkcS9sBCsN++f0dI8adyLDh17dVp6EKC+h4ut4BdnDhO9CJC0ooxsYqBmskwWPMx+0iflS6cXHEfsTtUhITn5bVl5FpmvLZJoFS5xhBHxz9tcfA3FF\/TsUkgvZbm\/yWBqjTVrDwD5QawSk\/XAfBnb1URfsdff="}',true);
 
         //var_dump(json_encode($temp));exit;
