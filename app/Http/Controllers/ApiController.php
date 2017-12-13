@@ -833,7 +833,7 @@ class ApiController extends Controller
             return response() -> json(['status'=>'error']);
         }
 
-        $price = 0.01;
+        //$price = 0.01;
         //生成订单编号
         $out_trade_no = date('Ymd') . str_pad(mt_rand(1, 99999), 5, '0', STR_PAD_LEFT);
         //var_dump('http://m.jhqck.com/al/order/sign?total_fee='.$price.'&out_trade_no='.$out_trade_no);exit;
