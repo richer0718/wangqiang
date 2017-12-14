@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>凯萨下载</title>
+    <title>益友竞猜</title>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport" />
 
@@ -53,9 +53,9 @@
     <div class="yaoqingma">
         <div><input type="text" id="yaoqingma" readonly="readonly" value="{{ $code }}"style="height:2.5rem;line-height:2.5rem;" /></div>
         <div><span onclick="download_android()" style="height:2.5rem;line-height:2.5rem;">安卓版下载</span></div>
-        <div><span onclick="download_ios()" style="height:2.5rem;line-height:2.5rem;" >苹果版版下载</span></div>
+        <div><span  style="height:2.5rem;line-height:2.5rem;" >苹果版版下载</span></div>
     </div>
-    <!--<div class="yaoqingma"></div> -->
+    <!--<div class="yaoqingma"></div> onclick="download_ios()" -->
 </div>
 
 
@@ -63,7 +63,7 @@
 <script language="javascript">
     function download_android(){
         //下载安卓
-        window.location.href="{{ asset('apk/kaisa.apk') }}";
+        window.location.href="{{ asset('apk/yiyou.apk') }}";
     }
 
     function download_ios(){
