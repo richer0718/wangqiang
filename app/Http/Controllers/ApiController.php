@@ -1424,7 +1424,7 @@ class ApiController extends Controller
             return response() -> json(['status'=>'error']);
         }
         if(!file_exists(public_path('qrcodes/'.$code.'.svg'))){
-            QrCode::generate('http://jhqck.com/kaisa/public/downLoad/'.$code, public_path('qrcodes/'.$code.'.svg'));
+            QrCode::generate('http://jc.xyzxzy.cn/public/downLoad/'.$code, public_path('qrcodes/'.$code.'.svg'));
             return response() -> json(['status'=>'success']);
         }
 
