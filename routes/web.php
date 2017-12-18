@@ -89,7 +89,7 @@ Route::group(['prefix' => 'api'], function () {
 
 //后台
 
-Route::get('/kaisaadmin/login', 'Admin\IndexController@login');
+Route::get('/yiyouadmin/login', 'Admin\IndexController@login');
 Route::any('/admin/loginRes', 'Admin\IndexController@loginRes');
 Route::any('/admin/loginout', 'Admin\IndexController@loginout');
 
@@ -105,4 +105,7 @@ Route::group(['as' => 'user','middleware' => ['checkadminlogin']], function () {
 });
 Route::group(['as' => 'prize','middleware' => ['checkadminlogin']], function () {
     Route::any('/admin/prize', 'Admin\PrizeController@index');
+});
+Route::group(['as' => 'dangwei','middleware' => ['checkadminlogin']], function () {
+    Route::any('/admin/dangwei', 'Admin\PrizeController@dangwei');
 });
